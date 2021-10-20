@@ -1,0 +1,8 @@
+---
+const small = "https://woka-lamps-vienna.s3.eu-central-1.amazonaws.com/small_19_woka_39ef445aaf.jpg"
+const medium = "https://woka-lamps-vienna.s3.eu-central-1.amazonaws.com/medium_19_woka_39ef445aaf.jpg"
+const large = "https://woka-lamps-vienna.s3.eu-central-1.amazonaws.com/large_19_woka_39ef445aaf.jpg"
+const full = "https://woka-lamps-vienna.s3.eu-central-1.amazonaws.com/19_woka_39ef445aaf.jpg"
+---
+
+<img src={full} srcset={`${large} 1000px, ${medium} 750px ${small} 500px`} sizes="(min-width: 1280px) 20vw,(min-width: 1024px) 20vw,(min-width: 768px) 50vw,50vw">
