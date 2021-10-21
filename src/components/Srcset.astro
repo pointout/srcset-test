@@ -5,4 +5,19 @@ const large = "https://woka-lamps-vienna.s3.eu-central-1.amazonaws.com/large_19_
 const full = "https://woka-lamps-vienna.s3.eu-central-1.amazonaws.com/19_woka_39ef445aaf.jpg"
 ---
 
-<img src={full} srcset={`${large} 1000px, ${medium} 750px ${small} 500px`} sizes="(min-width: 1280px) 20vw,(min-width: 1024px) 20vw,(min-width: 768px) 50vw,50vw">
+<img src={medium} srcset={`${small} 500w, ${medium} 750w, ${large} 1000w, ${full}`} sizes="(min-width:1280px) 80vw, (min-width:1024px) 40vw, (min-width:768px) 50vw, 100vw">
+
+<style>
+  img { width:100vw; }
+  @media (min-width:768px) {
+    img { width:50vw; }
+  } 
+  @media (min-width:1024px) {
+    img { width:60vw; }
+  }
+  @media (min-width:1280px) {
+    img { width:80vw; }
+  }
+  
+  
+</style>
